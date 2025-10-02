@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz: Gesunde Ernährung in Schulen</title>
     <style>
-        /* Der gesamte CSS-Code von oben */
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
@@ -13,20 +12,336 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
-        /* ... restlicher CSS-Code ... */
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .question p {
+            font-weight: bold;
+            margin-top: 0;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin: 8px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .correct {
+            color: #27ae60;
+        }
+        .incorrect {
+            color: #e74c3c;
+        }
     </style>
 </head>
 <body>
-    <!-- Der gesamte HTML-Body-Code von oben -->
     <div class="container">
         <h1>Quiz: Gesunde Ernährung in Schulen</h1>
-        <!-- ... restlicher HTML-Code ... -->
+        <p>Testen Sie Ihr Wissen zur Hausarbeit "Gesunde Ernährung in Schulen". Wählen Sie bei jeder Frage die richtige Antwort aus.</p>
+        
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Was empfiehlt die Deutsche Gesellschaft für Ernährung (DGE) als Grundlage einer gesunden Ernährung?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q1a" name="q1" value="a">
+                        <label for="q1a">Überwiegend tierische Produkte</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1b" name="q1" value="b">
+                        <label for="q1b">Überwiegend pflanzliche Produkte</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1c" name="q1" value="c">
+                        <label for="q1c">Ausschließlich Rohkost</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1d" name="q1" value="d">
+                        <label for="q1d">Viel Fleisch und Wurst</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>2. Welche Nährstoffe sind für das Knochenwachstum bei Kindern und Jugendlichen besonders wichtig?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q2a" name="q2" value="a">
+                        <label for="q2a">Eisen und Vitamin C</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2b" name="q2" value="b">
+                        <label for="q2b">Calcium und Vitamin D</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2c" name="q2" value="c">
+                        <label for="q2c">Ballaststoffe und Vitamin A</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2d" name="q2" value="d">
+                        <label for="q2d">Zucker und gesättigte Fette</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>3. Welche negative Auswirkung kann eine zu fett- und zuckerreiche Mahlzeit haben?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q3a" name="q3" value="a">
+                        <label for="q3a">Verbesserte Konzentration</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3b" name="q3" value="b">
+                        <label for="q3b">Leistungseinbruch und Müdigkeit</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3c" name="q3" value="c">
+                        <label for="q3c">Erhöhte Aufmerksamkeit</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3d" name="q3" value="d">
+                        <label for="q3d">Schnelleres Wachstum</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>4. Welches Konzept wird vom Bundeszentrum für Ernährung (BZfE) für ganzheitliche Ernährungsbildung in Schulen empfohlen?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q4a" name="q4" value="a">
+                        <label for="q4a">Whole Institution Food Approach (WIFA)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4b" name="q4" value="b">
+                        <label for="q4b">Ernährungsführerschein</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4c" name="q4" value="c">
+                        <label for="q4c">Schulgarten-Projekt</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4d" name="q4" value="d">
+                        <label for="q4d">Peer-Learning-Workshops</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>5. Was ist ein wichtiger Aspekt der Nachhaltigkeit in der Schulverpflegung?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q5a" name="q5" value="a">
+                        <label for="q5a">Mehr Bio, regional und saisonal einkaufen</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5b" name="q5" value="b">
+                        <label for="q5b">Nur vegetarische Gerichte anbieten</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5c" name="q5" value="c">
+                        <label for="q5c">Verpackungen aus Plastik vermeiden</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5d" name="q5" value="d">
+                        <label for="q5d">Keine tierischen Produkte</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>6. Welche Rolle spielt die Atmosphäre in der Mensa?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q6a" name="q6" value="a">
+                        <label for="q6a">Sie beeinflusst das Klassenklima und die Wertschätzung von Lebensmitteln</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6b" name="q6" value="b">
+                        <label for="q6b">Sie ist unwichtig, solange das Essen schmeckt</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6c" name="q6" value="c">
+                        <label for="q6c">Sie lenkt die Schüler vom Essen ab</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6d" name="q6" value="d">
+                        <label for="q6d">Sie sollte möglichst laut sein, damit sich die Schüler entspannen</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>7. Wer ist in Deutschland für den Bau und Betrieb von Mensen zuständig?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q7a" name="q7" value="a">
+                        <label for="q7a">Die Bundesregierung</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7b" name="q7" value="b">
+                        <label for="q7b">Die Lehrer</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7c" name="q7" value="c">
+                        <label for="q7c">Die Kommunen/Schulträger</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7d" name="q7" value="d">
+                        <label for="q7d">Die Eltern</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>8. Welches Programm unterstützt einkommensschwache Familien bei der Finanzierung des Schulessens?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q8a" name="q8" value="a">
+                        <label for="q8a">Bildungs- und Teilhabepaket (BuT)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8b" name="q8" value="b">
+                        <label for="q8b">Kindergeld</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8c" name="q8" value="c">
+                        <label for="q8c">Elterngeld</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8d" name="q8" value="d">
+                        <label for="q8d">Wohngeld</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>9. Was ist ein praktisches Beispiel für Ernährungsbildung im Schulalltag?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q9a" name="q9" value="a">
+                        <label for="q9a">Schulfrühstücke, Pausenbrote und Kochaktionen</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9b" name="q9" value="b">
+                        <label for="q9b">Hausaufgaben zum Thema Ernährung</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9c" name="q9" value="c">
+                        <label for="q9c">Vorträge von Ernährungswissenschaftlern</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9d" name="q9" value="d">
+                        <label for="q9d">Online-Kurse über Ernährung</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>10. Welche positive Wirkung hat eine ausgewogene Schulverpflegung auf Schüler?</p>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q10a" name="q10" value="a">
+                        <label for="q10a">Sie steigert Gesundheit, Konzentrationsfähigkeit und Motivation</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10b" name="q10" value="b">
+                        <label for="q10b">Sie macht die Schüler größer</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10c" name="q10" value="c">
+                        <label for="q10c">Sie verringert die Schulzeit</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10d" name="q10" value="d">
+                        <label for="q10d">Sie ersetzt den Sportunterricht</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" onclick="checkAnswers()">Antworten überprüfen</button>
+        </form>
+        
+        <div id="result"></div>
     </div>
 
     <script>
-        // Der gesamte JavaScript-Code von oben
         function checkAnswers() {
-            // ... JavaScript-Code ...
+            // Richtige Antworten
+            const correctAnswers = {
+                q1: "b",
+                q2: "b",
+                q3: "b",
+                q4: "a",
+                q5: "a",
+                q6: "a",
+                q7: "c",
+                q8: "a",
+                q9: "a",
+                q10: "a"
+            };
+            
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            
+            // Überprüfe jede Frage
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionName = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswers[questionName]) {
+                        score++;
+                    }
+                }
+            }
+            
+            // Zeige Ergebnis an
+            const resultElement = document.getElementById("result");
+            const percentage = (score / totalQuestions) * 100;
+            
+            if (percentage >= 70) {
+                resultElement.className = "correct";
+                resultElement.innerHTML = `Herzlichen Glückwunsch! Sie haben ${score} von ${totalQuestions} Fragen richtig beantwortet (${percentage.toFixed(0)}%).`;
+            } else {
+                resultElement.className = "incorrect";
+                resultElement.innerHTML = `Sie haben ${score} von ${totalQuestions} Fragen richtig beantwortet (${percentage.toFixed(0)}%). Bitte lesen Sie die Hausarbeit erneut und versuchen Sie es noch einmal.`;
+            }
         }
     </script>
 </body>
